@@ -119,7 +119,9 @@ public class Personnage {
 
     public void frapperPersonnage(Personnage personnageCible) {
         // TODO : Récupérer la valeur d'attaque pour ce tour, calculer les dégats,
+        int forceDeFrappe = attaqueCalcul();
         //modifier les points de vie du personnage cible, afficher les détails
+         
         // sur l'attaque, tel que montré dans l'énoncé.
     }
 
