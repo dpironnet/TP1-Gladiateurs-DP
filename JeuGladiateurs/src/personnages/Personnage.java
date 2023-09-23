@@ -105,24 +105,34 @@ public class Personnage {
             System.out.println("statut : Vivant ");
         }
     }
-    
+
     private int attaqueCalcul() {
         // TODO : Retourner la valeur de l'attaque du personnage.
-        
+
         // Cette valeur est trouvée aléatoirement et doit se situer entre ZÉRO et valeurMaxAttaque.
         Random random = new Random();
-        
+
         int attaque = random.nextInt(valeurMaxAttaque + 1);
         return attaque;
-       
+
     }
 
     public void frapperPersonnage(Personnage personnageCible) {
         // TODO : Récupérer la valeur d'attaque pour ce tour, calculer les dégats,
         int forceDeFrappe = attaqueCalcul();
+        int valeurDefense = personnageCible.getValeurDefense();
+        int dommages = forceDeFrappe - valeurDefense;
+
+        dommages = Math.max(0, dommages);
         //modifier les points de vie du personnage cible, afficher les détails
-         
+        personnageCible.pointsDeVie = personnageCible.pointsDeVie - dommages;
+        personnageCible.setPointsDeVie(Math.max(0, personnageCible.getPointsDeVie()));
+
         // sur l'attaque, tel que montré dans l'énoncé.
+        System.out.println(" ");
+        System.out.println(nom + " attaque avec une puissance de : " + forceDeFrappe);
+        System.out.println(personnageCible.getNom() + "a une defense de : " + valeurDefense);
+        System.out.println("les dommages sont donc de : " + dommages);
     }
 
     public void setNewInitiativeRandom() {

@@ -28,7 +28,11 @@ public class JeuGladiateurs {
     // TODO : Afficher le message du début du combat
     affichage.afficherDebutCombat();
         
-    
+    Bob.frapperPersonnage(Igor);
+    Bob.frapperPersonnage(Igor);
+    System.out.println("");
+    Igor.frapperPersonnage(Bob);
+    Igor.frapperPersonnage(Bob);
     // </editor-fold>
 
     // **************************************************************************
