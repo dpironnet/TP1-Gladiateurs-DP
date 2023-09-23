@@ -137,6 +137,9 @@ public class Personnage {
 
     public void setNewInitiativeRandom() {
         // TODO : Modifier de façon aléatoire la valeur INI du personnage.
+        Random random = new Random();
+        int newInitiative = random.nextInt(101);
+        this.setInitiative(newInitiative);
     }
     // </editor-fold>
 }
