@@ -3,6 +3,8 @@ package jeugladiateurs;
 import personnages.Personnage;
 import combat.CompteurDeTour;
 import combat.AffichageEcran;
+import personnages.Mirmillon;
+import personnages.Retiaire;
 
 public class JeuGladiateurs {
 
