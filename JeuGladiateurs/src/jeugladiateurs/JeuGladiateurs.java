@@ -61,6 +61,7 @@ public class JeuGladiateurs {
         affichage.afficherSeparateurDeTour();
         }while(Bob.getPointsDeVie()!= 0 && Igor.getPointsDeVie()!=0);
         // TODO : Après la boucle, afficher le résultat du combat
+        affichage.afficheVictoire(Igor, Bob);
         // </editor-fold>
     }
 
