@@ -12,6 +12,10 @@ import java.util.Random;
  */
 public class Mirmillon extends Personnage {
 
+    public Mirmillon(String nom, int attaqueMax, int defense, int pvs, int ini){
+        super(nom,attaqueMax,defense,pvs,ini);
+    }
+    
     @Override
     public void setNewInitiativeRandom() {
         Random random = new Random();
@@ -24,7 +28,7 @@ public class Mirmillon extends Personnage {
         super.frapperPersonnage(personnageCible);
         if (personnageCible.getPointsDeVie() == 0) {
             System.out.println(" ");
-            System.out.println(personnageCible + "a ete décapité !");
+            System.out.println(personnageCible.getNom() + "a ete décapité !");
         } else {
                 System.out.println("Bob lance une deuxieme attaque !");
                  super.frapperPersonnage(personnageCible);
